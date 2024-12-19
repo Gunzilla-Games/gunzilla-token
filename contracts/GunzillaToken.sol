@@ -9,7 +9,7 @@ contract GunzillaToken is ERC20BurnableUpgradeable, AccessControlUpgradeable {
     function initialize() public initializer {
         __ERC20_init_unchained("Gunzilla Token", "GUN");
         __AccessControl_init_unchained();
-        _grantRole(DEFAULT_ADMIN_ROLE, 0x02d16347ba80b1d5813850d4336e2f702212bc51);
+        _grantRole(DEFAULT_ADMIN_ROLE, 0x02d16347ba80B1D5813850d4336E2f702212Bc51);
     }
 
     function mint(address receiver, uint256 amount) external onlyRole(DEFAULT_ADMIN_ROLE) {
