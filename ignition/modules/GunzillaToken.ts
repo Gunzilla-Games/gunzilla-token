@@ -8,7 +8,7 @@ const GunzillaTokenModule = buildModule("GunzillaTokenModule", (m) => {
 
     const GunzillaTokenImplementation = m.contract("GunzillaToken");
     const intializeData = m.encodeFunctionCall(GunzillaTokenImplementation, "initialize");
-    const TransparableUpgradeableProxy = m.contract("TransparableUpgradeableProxy", [GunzillaTokenImplementation, "0x02d16347ba80B1D5813850d4336E2f702212Bc51", intializeData])
+    const TransparableUpgradeableProxy = m.contract("TransparentUpgradeableProxy", [GunzillaTokenImplementation, "0x02d16347ba80B1D5813850d4336E2f702212Bc51", intializeData])
 
     return {TransparableUpgradeableProxy};
 });
