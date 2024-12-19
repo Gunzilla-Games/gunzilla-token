@@ -10,12 +10,15 @@ const config: HardhatUserConfig = {
   networks: {
     base: {
       url:"https://base.llamarpc.com",
-      accounts:[process.env.PRIVATE_KEY as string]
+      accounts:[process.env.PRIVATE_KEY as string],
     },
     testgun:{
       url:"https://rpc.gunz.dev/ext/bc/ryk9vkvNuKtewME2PeCgybo9sdWXGmCkBrrx4VPuZPdVdAak8/rpc",
       accounts:[process.env.PRIVATE_KEY as string]
     }
+  },
+  etherscan:{
+    apiKey: process.env.ETHERSCAN_API_KEY as string
   }
 };
 
